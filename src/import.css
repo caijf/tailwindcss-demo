@@ -1,0 +1,9 @@
+.card {
+  border: 1px solid red;
+  border-radius: theme(borderRadius.lg);
+  padding: theme(spacing.4);
+}
+
+.btn {
+  padding: theme(spacing.4) theme(spacing.2);
+}
