@@ -1,10 +1,18 @@
-/* 如果当前文件有使用 @import 语法，则不能混用 @tailwind */
-/* @tailwind base;
-@tailwind components;
-@tailwind utilities; */
 
+/* 如果当前文件有使用 @import 语法，则不能混用 @tailwind */
+/* ref: https://tailwindcss.com/docs/using-with-preprocessors#using-post-css-as-your-preprocessor */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* 
 @import "tailwindcss/base";
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
+@import "./import.css"; */
 
-@import "./import.css";
+.demo-box {
+  background: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32' width='32' height='32' fill='none' stroke='%23f1f5f9'%3e%3cpath d='M0 .5H31.5V32'/%3e%3c/svg%3e") 10 10 repeat;
+
+  @apply bg-slate-50 rounded-xl p-8 border m-4;
+}

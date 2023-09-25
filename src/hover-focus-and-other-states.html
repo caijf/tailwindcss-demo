@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Handling Hover, Focus, and Other States</title>
+  <link rel="stylesheet" href="./index.css">
+</head>
+
+<body>
+  <div class="text-3xl">Pseudo-classes</div>
+  <div class="demo-box">
+    <button
+      class="bg-sky-500 hover:bg-sky-700 border rounded-full px-5 py-2 text-white leading-5 font-semibold text-sm">
+      Save changes
+    </button>
+  </div>
+  <div class="text-2xl">Hover, focus, and active</div>
+  <div class="demo-box">
+    <button
+      class="bg-violet-500 hover:bg-violet-600 active:bg-violet-700 text-sm text-white font-semibold focus:outline-none focus:ring focus:ring-violet-300 px-5 py-2 rounded-full">Save
+      changes</button>
+  </div>
+  <div class="text-2xl">First, last, odd and even</div>
+  <div class="demo-box">
+    <div class="max-w-md bg-white mx-auto">
+      <ul role="list" class="p-6 divide-y divide-slate-200">
+        <li class="flex py-4 first:pt-0 last:pb-0">
+          <img src="https://doly-dev.github.io/logo.png" alt="Doly Logo" class="w-10 rounded-full" />
+          <div class="ml-3 overflow-hidden">
+            <p class="text-sm font-medium text-slate-900">Kristen Ramos</p>
+            <p class="text-sm text-slate-500 truncate">kristen.ramos@example.com</p>
+          </div>
+        </li>
+        <li class="flex py-4 first:pt-0 last:pb-0">
+          <img src="https://doly-dev.github.io/logo.png" alt="Doly Logo" class="w-10 rounded-full" />
+          <div class="ml-3 overflow-hidden">
+            <p class="text-sm font-medium text-slate-900">Kristen Ramos</p>
+            <p class="text-sm text-slate-500 truncate">kristen.ramos@example.com</p>
+          </div>
+        </li>
+        <li class="flex py-4 first:pt-0 last:pb-0">
+          <img src="https://doly-dev.github.io/logo.png" alt="Doly Logo" class="w-10 rounded-full" />
+          <div class="ml-3 overflow-hidden">
+            <p class="text-sm font-medium text-slate-900">Kristen Ramos</p>
+            <p class="text-sm text-slate-500 truncate">kristen.ramos@example.com</p>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <table class="min-w-full">
+      <thead>
+        <tr class="bg-slate-50 border-b border-slate-200">
+          <th class="px-6 py-3 text-left text-sm font-medium text-slate-900">name</th>
+          <th class="px-6 py-3 text-left text-sm font-medium text-slate-900">email</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="odd:bg-white even:bg-slate-50">
+          <td class="first:font-medium text-slate-900 px-6 py-4">Kristen Ramos</td>
+          <td class="first:font-medium text-slate-900 px-6 py-4">kristen.ramos@example.com</td>
+        </tr>
+        <tr class="odd:bg-white even:bg-slate-50">
+          <td class="first:font-medium text-slate-900 px-6 py-4">Kristen Ramos</td>
+          <td class="first:font-medium text-slate-900 px-6 py-4">kristen.ramos@example.com</td>
+        </tr>
+        <tr class="odd:bg-white even:bg-slate-50">
+          <td class="first:font-medium text-slate-900 px-6 py-4">Kristen Ramos</td>
+          <td class="first:font-medium text-slate-900 px-6 py-4">kristen.ramos@example.com</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="text-2xl">Form states</div>
+  <div class="demo-box">
+    <div class="bg-white max-w-sm mx-auto rounded-xl p-5">
+      <form>
+        <div>
+          <label for="username" class="block font-medium text-sm">Username</label>
+          <div class="mt-1">
+            <input type="text" id="username"
+              class="px-3 py-2 bg-white border shadow-sm border-slate-300 placeholder-slate-400 disabled:bg-slate-50 disabled:text-slate-500 disabled:border-slate-200 rounded-md block w-full sm:text-sm focus:ring-1 focus:outline-none focus:border-sky-500 focus:ring-sky-500  invalid:border-pink-500 invalid:text-pink-600 focus:invalid:border-pink-500 focus:invalid:ring-pink-500 disabled:shadow-none"
+              disabled value="tnode">
+          </div>
+        </div>
+        <div class="mt-6">
+          <label for="email" class="block font-medium text-sm">Email</label>
+          <div class="mt-1">
+            <input type="email" id="email"
+              class="px-3 py-2 bg-white border shadow-sm border-slate-300 placeholder-slate-400 disabled:bg-slate-50 disabled:text-slate-500 disabled:border-slate-200 rounded-md block w-full sm:text-sm focus:ring-1 focus:outline-none focus:border-sky-500 focus:ring-sky-500  invalid:border-pink-500 invalid:text-pink-600 focus:invalid:border-pink-500 focus:invalid:ring-pink-500 disabled:shadow-none"
+              value="abc@example.">
+          </div>
+        </div>
+        <div class="mt-6">
+          <label for="password" class="block font-medium text-sm">Password</label>
+          <div class="mt-1">
+            <input type="password" id="password"
+              class="px-3 py-2 bg-white border shadow-sm border-slate-300 placeholder-slate-400 disabled:bg-slate-50 disabled:text-slate-500 disabled:border-slate-200 rounded-md block w-full sm:text-sm focus:ring-1 focus:outline-none focus:border-sky-500 focus:ring-sky-500  invalid:border-pink-500 invalid:text-pink-600 focus:invalid:border-pink-500 focus:invalid:ring-pink-500 disabled:shadow-none"
+              value="12345">
+          </div>
+        </div>
+        <div class="mt-6 text-right">
+          <button class="px-5 py-2.5 text-white bg-sky-500 hover:bg-sky-700 leading-5 rounded-md font-semibold">Save
+            changes</button>
+        </div>
+      </form>
+    </div>
+  </div>
+  <div class="text-2xl">Styling based on parent state</div>
+  <div class="demo-box">
+    <a href="#"
+      class="group block bg-white p-6 max-w-xs mx-auto rounded-lg ring-1 ring-slate-900/5 shadow-lg space-y-3 hover:bg-sky-500 hover:ring-sky-500">
+      <div class="flex items-center space-x-3">
+        <div class="text-sky-500 h-5 w-5 group-hover:text-white">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" aria-hidden="true" focusable="false"
+            fill="currentColor">
+            <path
+              d="m.5 3 .04.87a1.99 1.99 0 0 0-.342 1.311l.637 7A2 2 0 0 0 2.826 14H9v-1H2.826a1 1 0 0 1-.995-.91l-.637-7A1 1 0 0 1 2.19 4h11.62a1 1 0 0 1 .996 1.09L14.54 8h1.005l.256-2.819A2 2 0 0 0 13.81 3H9.828a2 2 0 0 1-1.414-.586l-.828-.828A2 2 0 0 0 6.172 1H2.5a2 2 0 0 0-2 2zm5.672-1a1 1 0 0 1 .707.293L7.586 3H2.19c-.24 0-.47.042-.683.12L1.5 2.98a1 1 0 0 1 1-.98h3.672z">
+            </path>
+            <path
+              d="M13.5 10a.5.5 0 0 1 .5.5V12h1.5a.5.5 0 1 1 0 1H14v1.5a.5.5 0 1 1-1 0V13h-1.5a.5.5 0 0 1 0-1H13v-1.5a.5.5 0 0 1 .5-.5z">
+            </path>
+          </svg>
+        </div>
+        <h3 class="text-sm text-sky-900 font-medium group-hover:text-white">New project</h3>
+      </div>
+      <p class="text-slate-500 text-sm group-hover:text-white">Create a new project from a variety of starting
+        templates.</p>
+    </a>
+  </div>
+  <div class="text-xl">Differentiating nested groups</div>
+  <div class="demo-box">
+    <div class="bg-white p-3 shadow-sm max-w-md mx-auto">
+      <ul role="list">
+        <li class="group/item flex items-center justify-between relative hover:bg-slate-100 rounded-lg p-4">
+          <div class="gap-4 flex items-center">
+            <img src="https://doly-dev.github.io/logo.png" alt="Doly Logo" class="w-10 rounded-full shrink-0" />
+            <div class="">
+              <a class="text-md text-slate-900 font-semibold" href="#">
+                <span class="absolute inset-0"></span>
+                Leslie Abbott
+              </a>
+              <div class="text-sm text-slate-500">Co-Founder / CEO</div>
+            </div>
+          </div>
+          <a href="#"
+            class="group/edit transition relative flex items-center space-x-1 text-slate-500 py-1 pl-4 pr-3 leading-5 rounded-full hover:bg-slate-200 invisible group-hover/item:visible">
+            <span class="text-sm font-semibold group-hover/edit:text-slate-700">Call</span>
+            <div
+              class="text-sm text-slate-500 w-3 h-3 transition group-hover/edit:translate-x-0.5 group-hover/edit:text-slate-700">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true"
+                focusable="false">
+                <path fill-rule="evenodd"
+                  d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z">
+                </path>
+              </svg>
+            </div>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="text-xl">Arbitrary groups</div>
+  <div class="demo-box">
+    <div class="group is-published">
+      <div class="hidden group-[.is-published]:block">
+        Published
+      </div>
+    </div>
+  </div>
+  <div class="text-2xl">Styling based on sibling state</div>
+  <div class="demo-box">
+    <div class="max-w-md mx-auto bg-white p-6">
+      <form>
+        <label for="email2" class="block" class="text-sm font-medium text-slate-700">Email</label>
+        <div>
+          <input type="email" id="email2" value="abc@example."
+            class="peer w-full rounded-md border border-slate-200 text-sm px-3 py-2 block focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500 invalid:border-pink-500 focus:invalid:ring-pink-500 invalid:text-pink-500 focus:invalid:border-pink-500" />
+          <p class="invisible text-sm text-pink-600 peer-invalid:visible">Please provide a valid email address.</p>
+        </div>
+      </form>
+    </div>
+  </div>
+  <div class="text-2xl">Differentiating peers</div>
+  <div class="demo-box">
+    <div class="max-w-md mx-auto bg-white p-6">
+      <form>
+        <fieldset>
+          <legend class="py-2 mb-2 border-b block w-full">Published status</legend>
+          <input type="radio" id="status-draft" class="peer/draft" name="status" checked />
+          <label for="status-draft" class="peer-checked/draft:text-sky-500">Draft</label>
+          <input type="radio" id="status-published" class="peer/published ml-4" name="status" checked />
+          <label for="status-published" class="peer-checked/published:text-sky-500">Published</label>
+          <div class="hidden peer-checked/draft:block text-sm text-slate-500 mt-4">Drafts are only visible to
+            administrators.
+          </div>
+          <div class="hidden peer-checked/published:block text-sm text-slate-500 mt-4">Your post will be publicly
+            visible on
+            your site.</div>
+        </fieldset>
+      </form>
+    </div>
+  </div>
+  <div class="text-3xl">Pseudo-elements</div>
+  <div class="text-2xl">Before and after</div>
+  <div class="demo-box">
+    <div class="mx-auto max-w-sm bg-white p-6">
+      <form>
+        <label for="email3"
+          class="after:content-['*'] after:ml-0.5 after:text-red-500 block text-sm font-medium text-slate-700">Email</label>
+        <input type="email" name="email3"
+          class="mt-1 px-3 py-2 bg-white border shadow-sm border-slate-300 placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500 block w-full rounded-md sm:text-sm"
+          placeholder="you@example.com">
+      </form>
+    </div>
+    <div class="mt-3 mx-auto max-w-sm bg-white p-6">
+      <blockquote class="text-2xl font-semibold italic text-center text-slate-900">
+        When you look
+        <span
+          class="before:block before:absolute before:-inset-1 before:-skew-y-3 before:bg-pink-500 relative inline-block">
+          <span class="relative text-white">annoyed</span>
+        </span>
+        all the time, people think that you're busy.
+      </blockquote>
+    </div>
+  </div>
+  <div class="text-xl">use `&lt;span&gt;` instead of the `::before` pseudo-element</div>
+  <div class="demo-box">
+    <div class="mx-auto max-w-sm bg-white p-6">
+      <blockquote class="text-2xl font-semibold italic text-center text-slate-900">
+        When you look
+        <span class="relative inline-block">
+          <span class="block absolute -inset-1 -skew-y-3 bg-pink-500" aria-hidden="true"></span>
+          <span class="relative text-white">annoyed</span>
+        </span>
+        all the time, people think that you're busy.
+      </blockquote>
+    </div>
+  </div>
+  <div class="text-2xl">Placeholder text</div>
+  <div class="demo-box">
+    <form>
+      <label class="relative block max-w-md mx-auto">
+        <span class="text-slate-300 absolute left-0 inset-y-0 pl-2 flex items-center">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="currentColor" viewBox="0 0 16 16"
+            aria-hidden="true" focusable="false">
+            <path
+              d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z">
+            </path>
+          </svg>
+        </span>
+        <span class="sr-only">Search</span>
+        <input type="text"
+          class="pl-9 py-2 pr-3 border rounded-md block w-full focus:border-sky-500 focus:outline-none focus:ring-1 focus:ring-sky-500 placeholder:italic placeholder:text-slate-400"
+          placeholder="Search for anything...">
+      </label>
+    </form>
+  </div>
+  <div class="text-2xl">File input buttons</div>
+  <div class="demo-box">
+    <div class="max-w-md mx-auto bg-white p-4 shadow-sm">
+      <form class="flex items-center space-x-6">
+        <div class="shrink-0">
+          <img src="https://doly-dev.github.io/logo.png" alt="Doly Logo" class="w-16 object-cover rounded-full">
+        </div>
+        <label class="block">
+          <span class="sr-only">Choose profile photo</span>
+          <input type="file"
+            class="block w-full text-sm text-slate-500 file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-violet-50 file:text-violet-700 hover:file:bg-violet-100">
+        </label>
+      </form>
+    </div>
+  </div>
+  <div class="text-2xl">List markers</div>
+  <div class="demo-box">
+    <div class="bg-white max-w-md mx-auto p-5">
+      <h2 class="text-base font-semibold text-slate-900">Ingredients</h2>
+      <ul role="list" class="list-disc mt-3 pl-5 space-y-3 marker:text-sky-400">
+        <li>5 cups chopped Porcini mushrooms</li>
+        <li>1/2 cup of olive oil</li>
+        <li>3lb of celery</li>
+      </ul>
+    </div>
+  </div>
+  <div class="text-2xl">Highlighted text</div>
+  <div class="demo-box">
+    <div class="bg-white max-w-md mx-auto p-5">
+      <p class="selection:bg-fuchsia-300 selection:text-fuchsia-900">
+        So I started to walk into the water. I won't lie to you boys, I was
+        terrified. But I pressed on, and as I made my way past the breakers
+        a strange calm came over me. I don't know if it was divine intervention
+        or the kinship of all living things but I tell you Jerry at that moment,
+        I <em>was</em> a marine biologist.
+      </p>
+    </div>
+  </div>
+  <div class="text-2xl">First-line and first-letter</div>
+  <div class="demo-box">
+    <div class="bg-white max-w-md mx-auto p-5">
+      <p
+        class="first-line:uppercase first-line:tracking-widest first-letter:text-7xl first-letter:font-bold first-letter:text-slate-900 first-letter:mr-3 first-letter:float-left">
+        Well, let me tell you something, funny boy. Y'know that little stamp, the one
+        that says "New York Public Library"? Well that may not mean anything to you,
+        but that means a lot to me. One whole hell of a lot.</p>
+      <p class="mt-6">Sure, go ahead, laugh if you want to. I've seen your type before: Flashy, making the scene,
+        flaunting convention. Yeah, I know what you're thinking. What's this guy making such a big stink about old
+        library books? Well, let me give you a hint, junior.</p>
+    </div>
+  </div>
+  <div class="text-2xl">Dialog backdrops</div>
+  <div class="demo-box">暂无</div>
+  <div class="text-3xl">Media and feature queries</div>
+  <div class="text-2xl">Responsive breakpoints</div>
+  <div class="demo-box">
+    <div class="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-6">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+      <div>4</div>
+      <div>5</div>
+      <div>6</div>
+    </div>
+  </div>
+  <div class="text-2xl">Prefers color scheme</div>
+  <div class="demo-box">
+    <div class="bg-white dark:bg-slate-900 rounded-lg px-6 py-8 ring-1 ring-slate-900/5 shadow-lg">
+      <div>
+        <span class="inline-flex items-center justify-center p-2 bg-indigo-500 rounded-md shadow-lg text-white">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="currentColor" viewBox="0 0 16 16"
+            aria-hidden="true" focusable="false">
+            <path
+              d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z">
+            </path>
+            <path fill-rule="evenodd"
+              d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5v11z">
+            </path>
+          </svg>
+        </span>
+      </div>
+      <h3 class="text-slate-900 dark:text-white mt-5 text-base font-medium tracking-tight">Writes Upside-Down</h3>
+      <p class="text-slate-500 dark:text-slate-400 mt-2 text-sm">The Zero Gravity Pen can be used to write in any
+        orientation, including upside-down. It even works in outer space.</p>
+    </div>
+  </div>
+  <div class="text-2xl">Perfers reduced motion</div>
+  <div class="demo-box">
+    <button type="button"
+      class="bg-indigo-500 text-white inline-flex items-center rounded-md px-4 py-2 text-sm leading-6 font-semibold shadow"
+      disabled>
+      <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 mr-3 -ml-1 motion-reduce:hidden animate-spin"
+        fill="currentColor" viewBox="0 0 16 16" aria-hidden="true" focusable="false">
+        <path fill-rule="evenodd" d="M8 3a5 5 0 1 0 4.546 2.914.5.5 0 0 1 .908-.417A6 6 0 1 1 8 2v1z"></path>
+        <path d="M8 4.466V.534a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384L8.41 4.658A.25.25 0 0 1 8 4.466z">
+        </path>
+      </svg>
+      Processing...
+    </button>
+  </div>
+  <div class="text-2xl">Perfers contrast</div>
+  <div class="demo-box">
+    <div class="bg-white max-w-md p-6 mx-auto shadow">
+      <form>
+        <label for="contrast-example" class="block text-sm font-medium text-slate-700">Social Security Number</label>
+        <div class="mt-1">
+          <input type="text" name="contrast-example"
+            class="px-3 py-2 bg-white border shadow-sm border-slate-200 placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block w-full rounded-md sm:text-sm focus:ring-1 contrast-more:placeholder-slate-500"
+            placeholder="000-00-0000">
+          <p class="mt-2 text-sm text-slate-600 opacity-10 contrast-more:opacity-100">We need this to steal your
+            identity.
+          </p>
+        </div>
+      </form>
+    </div>
+  </div>
+  <div class="text-2xl">Viewport orientation</div>
+  <div class="demo-box">
+    <div class="portrait:hidden">portrait:hidden</div>
+    <div class="landsscape:hidden">landsscape:hidden</div>
+  </div>
+  <div class="text-2xl">Print styles</div>
+  <div class="demo-box">
+    <div>
+      <article class="print:hidden">
+        <h1>My Secret Pizaa Recipe</h1>
+        <p>This recipe is a secret, and must not be shared with anyone.</p>
+      </article>
+      <div class="hidden print:block">
+        Are you seriously trying to pring this? It's secret!
+      </div>
+    </div>
+  </div>
+  <div class="text-2xl">Supports rules</div>
+  <div class="demo-box">
+    <div class="flex supports-[display:grid]:grid supports-[display:grid]:grid-cols-3">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+      <div>4</div>
+      <div>5</div>
+      <div>6</div>
+    </div>
+  </div>
+  <div class="text-3xl">Attribute selectors</div>
+  <div class="text-2xl">ARIA states</div>
+  <div class="demo-box"></div>
+</body>
+
+</html>
